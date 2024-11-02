@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 단어 조합기 (Word Combinator)
 
-## Getting Started
+다중 리스트의 단어들을 자동으로 조합해주는 웹 애플리케이션입니다. 여러 개의 리스트를 관리하고 선택적으로 조합할 수 있어 효율적인 단어 조합 작업이 가능합니다.
 
-First, run the development server:
+## ✨ 주요 기능
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 리스트 관리
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 여러 개의 단어 리스트 생성 및 관리 (최소 2개)
+- 리스트 추가/삭제 기능
+- 각 리스트별 단어 개별 삭제 가능
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 단어 입력
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Enter키로 즉시 단어 추가
+- 복사/붙여넣기 지원 (엑셀 데이터 호환)
+- 여러 줄 동시 입력 가능
 
-## Learn More
+### 조합 기능
 
-To learn more about Next.js, take a look at the following resources:
+- 선택한 리스트들의 단어를 자동으로 조합
+- 체크박스로 조합에 포함할 리스트 선택 가능
+- 조합 결과 클립보드 복사 기능
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 사용 방법
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **단어 입력**
 
-## Deploy on Vercel
+   - 각 리스트의 텍스트 영역에 단어를 입력하고 Enter를 누르세요
+   - 엑셀에서 복사한 데이터를 직접 붙여넣을 수 있습니다
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **리스트 관리**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - "새 리스트 추가" 버튼으로 새로운 리스트를 추가할 수 있습니다
+   - 불필요한 리스트는 삭제 버튼으로 제거할 수 있습니다 (최소 2개 유지)
+   - 각 단어 옆의 'x' 버튼으로 개별 단어를 삭제할 수 있습니다
+
+3. **조합 설정**
+
+   - 각 리스트 옆의 체크박스로 조합에 포함할 리스트를 선택합니다
+   - 선택된 리스트의 단어들만 조합 결과에 반영됩니다
+
+4. **결과 확인**
+   - 조합된 결과는 하단의 결과창에서 확인할 수 있습니다
+   - "결과 복사" 버튼으로 클립보드에 복사할 수 있습니다
+
+## 🛠️ 기술 스택
+
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui 컴포넌트
+
+## 💡 활용 예시
+
+- 도메인 이름 생성
+- 상품명 조합
+- 키워드 조합
+- 계정명 생성
+- 기타 단어 조합이 필요한 모든 상황
+
+## 🔍 특이사항
+
+- 모든 입력과 조합이 실시간으로 처리됩니다
+- 복사/붙여넣기 시 자동으로 줄바꿈을 인식하여 처리합니다
+- 빈 줄과 불필요한 공백은 자동으로 제거됩니다
